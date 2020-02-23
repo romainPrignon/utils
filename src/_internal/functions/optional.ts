@@ -1,9 +1,8 @@
-import { Optional } from '../../../type'
+import { Optional, Fun } from '../../../type'
 
 
-const optional = <A, R>(fun: (...args: Array<A>) => R) =>
-  (...args: Array<A>): Optional<R> =>
-    fun(...args)
+type OptionalFun = <A extends Array<any>, R extends any>(fun: Fun<A, R>) => (...args: A) => Optional<R>
+const optional: OptionalFun = (fun) => (...args) => fun(...args)
 
 
 export {

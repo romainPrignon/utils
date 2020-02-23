@@ -29,7 +29,7 @@ describe('fp/functions/optional.ts', () => {
       const opt = optional((a) => a)
       expectType<(...args: Array<unknown>) => Optional<unknown>>(opt)
 
-      const res = opt() // should yield error about no args
+      const res = opt(1)
       expectType<Optional<unknown>>(res)
     })
 
@@ -37,16 +37,15 @@ describe('fp/functions/optional.ts', () => {
       const opt = optional((a: number) => a)
       expectType<(...args: Array<number>) => Optional<number>>(opt)
 
-      const res = opt(1) // should yield error about no args
+      const res = opt(1)
       expectType<Optional<number>>(res)
     })
 
-    it.skip('should be typed correctly for function with multiple params', () => {
-      // @ts-ignore
+    it('should be typed correctly for function with multiple params', () => {
       const opt = optional((a: number, b: string) => a + b)
-      expectType<(...args: Array<number | string>) => Optional<number | string>>(opt)
+      expectType<(...args: [number, string]) => Optional<number | string>>(opt)
 
-      const res = opt(1, 'a') // should yield error about no args
+      const res = opt(1, 'a')
       expectType<Optional<number | string>>(res)
     })
 
