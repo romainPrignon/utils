@@ -1,7 +1,7 @@
 import { BaseError } from 'make-error-cause'
 
 
-type Option = {
+export type ErrorOption = {
   cause?: Error | globalThis.Error
   code: string
 }
@@ -9,7 +9,7 @@ type Option = {
 class Error extends BaseError {
   code: string
 
-  constructor (message: string, opt: Option) {
+  constructor (message: string, opt: ErrorOption) {
     super(message, opt.cause)
 
     this.code = opt.code

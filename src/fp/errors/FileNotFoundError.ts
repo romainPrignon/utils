@@ -2,7 +2,7 @@ import { FileNotFoundError as _FileNotFoundError } from '../../_internal/error/F
 
 import { callable } from '../classes/callable'
 
-// @ts-ignore
+
 const FileNotFoundError = callable(_FileNotFoundError)
 
 

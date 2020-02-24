@@ -16,7 +16,7 @@ const readFile: ReadFile = async (path, encoding) => {
     }
   } catch (err) {
     if (err.code === 'ENOENT') {
-      throw new FileNotFoundError(err.message, { cause: err, filename: path })
+      throw new FileNotFoundError(err.message, { code: err.code, cause: err, filename: path })
     }
 
     throw err

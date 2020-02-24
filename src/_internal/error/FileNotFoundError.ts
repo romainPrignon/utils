@@ -1,20 +1,21 @@
-import { BaseError } from 'make-error-cause'
+import { Error, ErrorOption } from './Error'
 
 
-type Option = {
+type FileNotFoundErrorOption = {
   cause?: Error
   filename: string
-}
+} & ErrorOption
 
-class FileNotFoundError extends BaseError {
+class FileNotFoundError extends Error {
   filename: string
 
-  constructor (message: string, opt: Option) {
-    super(message, opt.cause)
+  constructor (message: string, opt: FileNotFoundErrorOption) {
+    super(message, opt)
 
     this.filename = opt.filename
   }
 }
+
 
 export {
   FileNotFoundError
