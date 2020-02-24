@@ -40,7 +40,7 @@
     "postversion": "git push --follow-tags",
     "bundle": "./src/script/bundle.js bundle/",
     "prepublishOnly": "pinst --disable && npm run compile && npm run bundle",
-    "postpublish": "pinst --enable && rm -rf bundle/"
+    "postpublish": "pinst --enable"
   },
   "dependencies": {
     "@sindresorhus/is": "2",
