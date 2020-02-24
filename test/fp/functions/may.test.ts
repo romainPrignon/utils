@@ -16,7 +16,7 @@ describe('fp/functions/may.ts', () => {
     })
 
     it('should return an Error if failure callback not provided', () => {
-      const err = Error('boom')
+      const err = Error('boom', { code: 'BOOM' })
 
       expect(
         may(() => { throw err })
@@ -30,7 +30,7 @@ describe('fp/functions/may.ts', () => {
     })
 
     it('should return fallback in failure case', () => {
-      const err = Error('boom')
+      const err = Error('boom', { code: 'BOOM' })
 
       expect(
         may(

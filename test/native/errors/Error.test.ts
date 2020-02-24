@@ -10,13 +10,11 @@ describe('native/errors/index.ts', () => {
     const err = new globalThis.Error()
     const code = 'code'
 
-    it.skip('should be typed as Error', () => {
-      // @ts-ignore
+    it('should be typed as Error', () => {
       expectType<Error>(new Error(message, { cause: err, code }))
     })
 
-    it.skip('should return an instance of Error', () => {
-      // @ts-ignore
+    it('should return an instance of Error', () => {
       const error = new Error(message, { cause: err, code })
 
       expect(error).toBeInstanceOf(Error)

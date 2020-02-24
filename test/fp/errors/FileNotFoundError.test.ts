@@ -15,9 +15,12 @@ describe('fp/errors/index.ts', () => {
       expectType<FileNotFoundErrorClass>(FileNotFoundError(message, { cause: err, filename }))
     })
 
-    it.skip('should return an instance of FileNotFoundError', () => {
+    it('should return an instance of FileNotFoundError', () => {
       const fileNotFoundError = FileNotFoundError(message, { cause: err, filename })
-      expect(fileNotFoundError).toBeInstanceOf(FileNotFoundError)
+
+      expect(fileNotFoundError.message).toEqual(message)
+      expect(fileNotFoundError.cause).toEqual(err)
+      expect(fileNotFoundError.filename).toEqual(filename)
     })
   })
 })

@@ -3,16 +3,16 @@ import { BaseError } from 'make-error-cause'
 
 type Option = {
   cause?: Error
-  filename?: string
+  filename: string
 }
 
 class FileNotFoundError extends BaseError {
-  filename?: string
+  filename: string
 
-  constructor (message: string, { cause, filename }: Option) {
-    super(message, cause)
+  constructor (message: string, opt: Option) {
+    super(message, opt.cause)
 
-    this.filename = filename
+    this.filename = opt.filename
   }
 }
 
