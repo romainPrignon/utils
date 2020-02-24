@@ -6,7 +6,7 @@ import { callable } from '../../../src/fp/classes/callable'
 
 describe('fp/classes/callable.ts', () => {
   describe('callable()', () => {
-    it.skip('should be typed as a factory function', () => {
+    it('should be typed as a factory function', () => {
       class A {}
       const a = callable(A)
       expectType<(...args: never[]) => A>(a)
@@ -21,9 +21,8 @@ describe('fp/classes/callable.ts', () => {
         }
       }
 
-      // @ts-ignore
       const b = callable(B)
-      expectType<(...args: never[]) => B>(b)
+      expectType<(...args: [number, string]) => B>(b)
       expectType<B>(b(1, 'foo'))
     })
 
@@ -32,6 +31,7 @@ describe('fp/classes/callable.ts', () => {
       const a = callable(A)
 
       expect(a()).toBeInstanceOf(A)
+      expect(a()).toBeInstanceOf(a)
     })
   })
 })
