@@ -30,25 +30,14 @@ See [package.json](package.json) scripts section
 
 ### Release
 
-Example: Releasing a minor version following semver
+Example: Releasing a minor version using semver
 
 ```sh
 npm run version:minor
-npm run publish
+npm run publish bundle
 ```
 
 
 ## License
 
 The code is available under the [MIT license](LICENSE.md).
-
-
-# TODO
-- memo types
-- optional types
-- Error
-- skipped test
-- better type lisibility (Fun,...)
-- readfile: curry
-- factory function as class (prototype ??)
-- pass thougth all tslint, ts ignored error and either fix or relax (mutation ok in test ??)
