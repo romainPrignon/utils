@@ -1,4 +1,7 @@
+import { Class } from '../../../type'
+
 import l from 'lodash'
+
 
 /**
  * wrapper around instanceof keyword
@@ -7,7 +10,7 @@ import l from 'lodash'
  * const instanceOfA = instanceOf(A)
  * if (instanceOfA(new A())) // true
  */
-const instanceOf = l.curry<new () => any, any, boolean>((Class: new () => any, value: any): boolean =>
+const instanceOf = l.curry<Class<any, any>, any, boolean>((Class: Class<any, any>, value: any): boolean =>
   value instanceof Class
 )
 

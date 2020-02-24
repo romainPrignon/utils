@@ -1,6 +1,5 @@
 import { Class } from '../../../type'
 
-
 /**
  * return callable function from a Class
  * @example
