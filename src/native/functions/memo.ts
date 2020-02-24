@@ -1,32 +1,27 @@
-// todo => put in type
-// type Fun1<A1 extends any, R> = (...a: Array<A1>) => R
-// type Fun2<A1 extends any, A2 extends any, R> = (...a: Array<A1 | A2>) => R
+import { Fun } from '../../../type'
 
-// const memo = <A, R>(fun: Fun<A, R>): Fun<A, R> => {
 
-//   const cache = new Map()
+const memo = <A extends Array<any>, R extends any>(fun: Fun<A, R>): Fun<A, R> => {
 
-//   const memoized: Fun<A, R> = (...args) => {
-//     const key = args[0]
+  const cache = new Map()
 
-//     if (cache.has(key)) {
-//       return cache.get(key)
-//     }
+  const memoized: Fun<A, R> = (...args) => {
+    const key = args[0]
 
-//     const result = fun(...args)
-//     cache.set(key, result)
+    if (cache.has(key)) {
+      return cache.get(key)
+    }
 
-//     return result
-//   }
+    const result = fun(...args)
+    cache.set(key, result)
 
-//   return memoized
-// }
+    return result
+  }
 
-// const a = memoize((a: string, b: number) => []) TODO
+  return memoized
+}
 
-// export {
-//   memo
-// }
 
 export {
+  memo
 }
