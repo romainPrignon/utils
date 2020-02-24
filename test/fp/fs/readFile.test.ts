@@ -1,4 +1,4 @@
-import { FileNotFoundError, Error } from '../../../src/fp/errors'
+import { Error } from '../../../src/fp/errors'
 
 // test
 import { readFile } from '../../../src/fp/fs/readFile'

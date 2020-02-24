@@ -1,4 +1,3 @@
-import * as l from 'lodash' // TODO: curry
 import fs from 'fs'
 import util from 'util'
 import { FileNotFoundError } from '../errors'
