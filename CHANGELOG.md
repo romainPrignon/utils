@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.0.1"></a>
+## 1.0.1 (2020-02-24)
+
+### Fixed
+
+- 💚 publish the bundle directory instead of root [[4c74a70](https://github.com/romainPrignon/utils/commit/4c74a70a57dcfef7fbc6e96881168004058768fd)]
+
+
 <a name="1.0.0"></a>
 ## 1.0.0 (2020-02-24)
 
