@@ -1,5 +1,17 @@
 # Changelog
 
+<a name="1.0.3"></a>
+## 1.0.3 (2020-02-25)
+
+### Fixed
+
+- 💚 these errors should have popped earlier... [[c528d7d](https://github.com/romainPrignon/utils/commit/c528d7d5e792fd69d032070b30522600d49beac9)]
+
+### Miscellaneous
+
+-  👷 patching bundle/package.json before releasing [[ed0283c](https://github.com/romainPrignon/utils/commit/ed0283caacca314eba0d073d22fc6a3bf47314b1)]
+
+
 <a name="1.0.2"></a>
 ## 1.0.2 (2020-02-24)
 
