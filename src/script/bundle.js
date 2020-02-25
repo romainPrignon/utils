@@ -8,7 +8,13 @@ const pkg = require(resolve('package.json'))
 
 shell(`rm -rf ${bundleDir}`)
 shell(`mkdir -p ${bundleDir}`)
+
 shell(`cp -r ${pkg.source}/* ${bundleDir}`)
+
 pkg.assets.forEach(asset => {
   shell(`cp -r ${asset} ${bundleDir}/${asset}`)
+})
+
+Object.values(pkg.bin).forEach(bin => {
+  shell(`chmod a+x ${bundleDir}/${bin}`)
 })
