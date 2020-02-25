@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.0.4"></a>
+## 1.0.4 (2020-02-25)
+
+### Miscellaneous
+
+-  👷 use custom deploy script instead of patching bundle/package.json [[2da1a2e](https://github.com/romainPrignon/utils/commit/2da1a2e6b40671c1ed26fc1947d0224725495c07)]
+
+
 <a name="1.0.3"></a>
 ## 1.0.3 (2020-02-25)
 
