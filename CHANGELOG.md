@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.1.1"></a>
+## 1.1.1 (2020-02-25)
+
+### Fixed
+
+- 🐛 fix chmod on exported scripts [[042ec22](https://github.com/romainPrignon/utils/commit/042ec2281cb7391ce2ac09d7aea615eff14d7f6f)]
+
+
 <a name="1.1.0"></a>
 ## 1.1.0 (2020-02-25)
 
