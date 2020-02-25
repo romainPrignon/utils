@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.1.0"></a>
+## 1.1.0 (2020-02-25)
+
+### Added
+
+- ✨ add bundle script as bin [[3b4dd2b](https://github.com/romainPrignon/utils/commit/3b4dd2bc9b2c58285e387fe1f68e2531015aee19)]
+
+
 <a name="1.0.4"></a>
 ## 1.0.4 (2020-02-25)
 
