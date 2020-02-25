@@ -34,7 +34,7 @@ Example: Releasing a minor version using semver
 
 ```sh
 npm run version:minor
-npm publish bundle/
+npm run deploy
 ```
 
 

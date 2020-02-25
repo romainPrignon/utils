@@ -40,8 +40,7 @@
     "version:major": "npm version --no-commit-hooks major -m '🔖 Release v%s'",
     "postversion": "git push --follow-tags",
     "bundle": "./src/script/bundle.js bundle/",
-    "prepublishOnly": "pinst --disable && npm run compile && npm run bundle",
-    "postpublish": "pinst --enable"
+    "deploy": "./src/script/deploy.js"
   },
   "dependencies": {
     "@sindresorhus/is": "2",
