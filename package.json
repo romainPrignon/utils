@@ -23,6 +23,9 @@
     "package.json",
     "README.md"
   ],
+  "bin": {
+    "bundle": "./script/bundle.js"
+  },
   "scripts": {
     "postinstall": "gitmoji --init",
     "compile": "rm -rf dist/ && tsc -p src/",
