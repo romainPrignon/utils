@@ -11,11 +11,11 @@ describe('native/errors/index.ts', () => {
     const filename = 'filename'
 
     it('should be typed as FileNotFoundError', () => {
-      expectType<FileNotFoundError>(new FileNotFoundError(message, { cause: err, filename }))
+      expectType<FileNotFoundError>(new FileNotFoundError(message, { code: 'ENOENT', cause: err, filename }))
     })
 
     it('should return an instance of FileNotFoundError', () => {
-      const fileNotFoundError = new FileNotFoundError(message, { cause: err, filename })
+      const fileNotFoundError = new FileNotFoundError(message, { code: 'ENOENT', cause: err, filename })
 
       expect(fileNotFoundError).toBeInstanceOf(FileNotFoundError)
     })

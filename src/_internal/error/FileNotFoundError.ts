@@ -2,7 +2,7 @@ import { Error, ErrorOption } from './Error'
 
 
 type FileNotFoundErrorOption = {
-  cause?: Error
+  cause?: Error | globalThis.Error
   filename: string
 } & ErrorOption
 
