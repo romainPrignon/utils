@@ -3,6 +3,7 @@ module.exports = {
   testEnvironment: 'node',
   testMatch: [
     '**/test/**/*.test.ts',
+    '**/type/**/*.test.ts',
   ],
   coverageThreshold: {
     global: {
