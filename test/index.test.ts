@@ -1,5 +1,5 @@
 // test
-import { fp, native, runtype } from '../src'
+import { fp, native, runtypes } from '../src'
 // tslint:disable-next-line: no-duplicate-imports
 import * as Utils from '../src'
 
@@ -10,7 +10,7 @@ describe('index', () => {
     it('should export namespaces', () => {
       expect(Utils.fp).toBeDefined()
       expect(Utils.native).toBeDefined()
-      expect(Utils.runtype).toBeDefined()
+      expect(Utils.runtypes).toBeDefined()
     })
   })
 
@@ -46,9 +46,9 @@ describe('index', () => {
     })
   })
 
-  describe('runtype', () => {
-    it('should export runtype namespace', () => {
-      expect(runtype.Promise).toBeDefined()
+  describe('runtypes', () => {
+    it('should export runtypes namespace', () => {
+      expect(runtypes.Promise).toBeDefined()
     })
   })
 })

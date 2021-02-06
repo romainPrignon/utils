@@ -2,7 +2,7 @@ import { expectType } from 'tsd'
 import * as r from 'runtypes'
 
 // test
-import * as Runtype from '../../src/runtype/promise'
+import * as Runtype from '../../src/runtypes/promise'
 
 
 describe('promise.ts', () => {

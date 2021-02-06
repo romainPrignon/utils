@@ -1,7 +1,7 @@
 // test
-import { Promise } from '../../src/runtype'
+import { Promise } from '../../src/runtypes'
 // tslint:disable-next-line: no-duplicate-imports
-import * as Runtype from '../../src/runtype'
+import * as Runtype from '../../src/runtypes'
 
 
 describe('runtype', () => {
