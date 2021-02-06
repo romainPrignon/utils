@@ -46,10 +46,10 @@
     "deploy": "./src/script/deploy.js"
   },
   "dependencies": {
-    "@sindresorhus/is": "2",
-    "lodash": "4",
-    "make-error-cause": "2",
-    "runtypes": "4"
+    "@sindresorhus/is": "^4.0",
+    "lodash": "^4.17.20",
+    "make-error-cause": "^2.3",
+    "runtypes": "^5.0"
   },
   "devDependencies": {
     "@types/jest": "25",
