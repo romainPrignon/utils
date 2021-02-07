@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="2.1.0"></a>
+## 2.1.0 (2021-02-07)
+
+### Added
+
+- ✨ add mutable/immutable type [[40a5c4a](https://github.com/romainPrignon/utils/commit/40a5c4a32fd4f37c458b7c1fddd11aa94855c97f)]
+- ✨ add EmptyArray and NotEmptyArray runtypes [[55339a5](https://github.com/romainPrignon/utils/commit/55339a553e238fe8bf82140f0a172ccd66915b53)]
+- ✨ add EmptyString and NonEmptyString runtypes [[a57514d](https://github.com/romainPrignon/utils/commit/a57514dd4ea1932747627eccb51d384c8d96d1cd)]
+- ✅ test exported types [[7bb2b62](https://github.com/romainPrignon/utils/commit/7bb2b62abce16278d0bbb11569d4e3feb786d05f)]
+
+### Changed
+
+- 🚚 rename runtype into runtypes [[0a3521e](https://github.com/romainPrignon/utils/commit/0a3521ecaf9c29ad238582bbf6f277c999dd7685)]
+
+
 <a name="2.0.0"></a>
 ## 2.0.0 (2021-02-06)
 
