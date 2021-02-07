@@ -16,7 +16,7 @@ describe('index', () => {
 
   describe('fp', () => {
     it('should export fp namespace', () => {
-      expect(Object.entries(fp).length).toEqual(9)
+      expect(Object.entries(fp).length).toEqual(10)
 
       expect(fp.arrays).toBeDefined()
       expect(fp.classes).toBeDefined()
@@ -32,7 +32,7 @@ describe('index', () => {
 
   describe('native', () => {
     it('should export native namespace', () => {
-      expect(Object.entries(native).length).toEqual(9)
+      expect(Object.entries(native).length).toEqual(10)
 
       expect(native.arrays).toBeDefined()
       expect(native.classes).toBeDefined()

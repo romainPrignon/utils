@@ -7,6 +7,7 @@ import * as _function from './functions'
 import * as _number from './numbers'
 import * as _object from './objects'
 import * as _string from './strings'
+import * as _utils from './utils'
 
 export const arrays = {
   ..._array
@@ -42,4 +43,8 @@ export const objects = {
 
 export const strings = {
   ..._string
+}
+
+export const utils = {
+  ..._utils
 }
