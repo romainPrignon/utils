@@ -1,4 +1,4 @@
-import { FileNotFoundError, Error } from '../../../src/native/errors'
+import { Error } from '../../../src/native/errors'
 
 // test
 import { readFile } from '../../../src/native/fs/readFile'
@@ -52,14 +52,14 @@ describe('native/fs/readFile.ts', () => {
     it('should throw FileNotFoundError', async () => {
       // Arrange
       const path = 'path'
-
+      const err = new Error('ENOENT', { code: 'ENOENT' })
       // Mock
       jest.spyOn(util, 'promisify').mockImplementation(() => async () => {
-        throw new Error('ENOENT', { code: 'ENOENT' })
+        throw err
       })
 
       // Act Assert
-      await expect(readFile(path)).rejects.toBeInstanceOf(FileNotFoundError)
+      await expect(readFile(path)).rejects.toEqual(err)
     })
 
     it('should throw Error in any other case', async () => {

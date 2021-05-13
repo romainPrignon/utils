@@ -1,21 +1,17 @@
 import fs from 'fs'
 import util from 'util'
-import { FileNotFoundError } from '../errors'
+import { Error } from '../errors'
 
-
-const readFile = async (path: string , encoding?: string): Promise<string> => {
+type ReadFile = (path: string, encoding?: string) => Promise<string | Buffer>
+const readFile: ReadFile = async (path, encoding) => {
 
   const readFileAsync = util.promisify(fs.readFile)
 
   try {
-    if (encoding) {
-      return await readFileAsync(path, encoding)
-    } else {
-      return await readFileAsync(path, 'utf8')
-    }
+    return await readFileAsync(path, encoding)
   } catch (err) {
     if (err.code === 'ENOENT') {
-      throw FileNotFoundError(err.message, { code: err.code, cause: err, filename: path })
+      throw Error(err.message, { code: err.code, cause: err })
     }
 
     throw err
