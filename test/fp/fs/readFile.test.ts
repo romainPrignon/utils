@@ -4,8 +4,8 @@ import { Error } from '../../../src/fp/errors'
 import { readFile } from '../../../src/fp/fs/readFile'
 
 // mock
-import util from 'util'
-jest.mock('util')
+import fs from 'fs/promises'
+jest.mock('fs')
 
 afterEach(() => {
   jest.restoreAllMocks()
@@ -20,7 +20,7 @@ describe('fp/fs/readFile.ts', () => {
       const content = 'content'
 
       // Mock
-      jest.spyOn(util, 'promisify').mockImplementation(() => async () => {
+      jest.spyOn(fs, 'readFile').mockImplementation(async () => {
         return content
       })
 
@@ -34,16 +34,16 @@ describe('fp/fs/readFile.ts', () => {
     it('should return file content with specified encoding', async () => {
       // Arrange
       const path = 'path'
-      const encoding = 'encoding'
+      const encoding = 'utf8'
       const content = 'content'
 
       // Mock
-      jest.spyOn(util, 'promisify').mockImplementation(() => async () => {
+      jest.spyOn(fs, 'readFile').mockImplementation(async () => {
         return content
       })
 
       // Act
-      const res = await readFile(path, encoding)
+      const res = await readFile(path, { encoding })
 
       // Assert
       expect(res).toEqual(content)
@@ -55,7 +55,7 @@ describe('fp/fs/readFile.ts', () => {
       const err = Error('ENOENT', { code: 'ENOENT' })
 
       // Mock
-      jest.spyOn(util, 'promisify').mockImplementation(() => async () => {
+      jest.spyOn(fs, 'readFile').mockImplementation(async () => {
         throw err
       })
 
@@ -69,7 +69,7 @@ describe('fp/fs/readFile.ts', () => {
       const err = Error('NOTENOENT', { code: 'NOTENOENT' })
 
       // Mock
-      jest.spyOn(util, 'promisify').mockImplementation(() => async () => {
+      jest.spyOn(fs, 'readFile').mockImplementation(async () => {
         throw err
       })
 

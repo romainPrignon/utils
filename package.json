@@ -9,8 +9,8 @@
     "url": "git+https://github.com/romainPrignon/utils.git"
   },
   "engines": {
-    "node": "12",
-    "npm": "6"
+    "node": "^14",
+    "npm": "^6.3"
   },
   "source": "dist",
   "main": "index.js",
@@ -55,7 +55,7 @@
   "devDependencies": {
     "@types/jest": "^26.0.23",
     "@types/lodash": "^4.14.169",
-    "@types/node": "^12.20.13",
+    "@types/node": "^14.14.45",
     "gitmoji-changelog": "2",
     "gitmoji-cli": "3",
     "husky": "4",

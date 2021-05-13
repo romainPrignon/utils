@@ -1,15 +1,15 @@
-import fs from 'fs'
-import util from 'util'
+import fs from 'fs/promises'
 import { Error } from '../errors'
 
-
-type ReadFile = (path: string, encoding?: string) => Promise<string | Buffer>
-const readFile: ReadFile = async (path, encoding) => {
-
-  const readFileAsync = util.promisify(fs.readFile)
+type ReadFile = (path: string, options?: { encoding: BufferEncoding }) => Promise<string | Buffer>
+const readFile: ReadFile = async (path, options) => {
 
   try {
-    return await readFileAsync(path, encoding)
+    if (options) {
+      return await fs.readFile(path, { encoding: options.encoding })
+    } else {
+      return await fs.readFile(path)
+    }
   } catch (err) {
     if (err.code === 'ENOENT') {
       throw new Error(err.message, { code: err.code, cause: err })
