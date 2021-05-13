@@ -53,9 +53,9 @@
     "zod": "^1.11.11"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.20",
-    "@types/lodash": "4",
-    "@types/node": "12",
+    "@types/jest": "^26.0.23",
+    "@types/lodash": "^4.14.169",
+    "@types/node": "^12.20.13",
     "gitmoji-changelog": "2",
     "gitmoji-cli": "3",
     "husky": "4",
