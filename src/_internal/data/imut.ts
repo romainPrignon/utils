@@ -1,7 +1,7 @@
 import { Immutable } from '../../../type'
 
 
-const imut = <T>(mutable: T): Immutable<T> => mutable
+const imut = <T>(data: T): Immutable<T> => data
 
 
 export {

@@ -1,11 +1,11 @@
 import { expectType } from 'tsd'
 
 // test
-import { mut } from '../../../src/fp/utils/mut'
-import { imut } from '../../../src/fp/utils'
+import { mut } from '../../../src/native/data/mut'
+import { imut } from '../../../src/native/data'
 
 
-describe('fp/utils/mut.ts', () => {
+describe('native/data/mut.ts', () => {
   describe('mut()', () => {
     it('should be typed correctly', () => {
       const array = [1]
