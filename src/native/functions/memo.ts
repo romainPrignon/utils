@@ -1,7 +1,7 @@
 import { Fun } from '../../../type'
 
 
-const memo = <A extends Array<any>, R extends any>(fun: Fun<A, R>): Fun<A, R> => {
+const memo = <A extends Array<unknown>, R extends unknown>(fun: Fun<A, R>): Fun<A, R> => {
 
   const cache = new Map()
 

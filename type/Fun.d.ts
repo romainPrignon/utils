@@ -1,4 +1,4 @@
-type Fun<A extends Array<any>, R extends any> = (...args: A) => R
+type Fun<A extends Array<unknown>, R extends unknown> = (...args: A) => R
 
 export {
   Fun

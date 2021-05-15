@@ -1,3 +1,6 @@
+/**
+ * @param failure We use err: "any instead" of "err: unknown" to map catch behaviour
+ */
 const mayAsync = async <R1, R2>(success: () => Promise<R1>, failure?: (err: any) => R2): Promise<R1 | R2> => {
   try {
     return await success()

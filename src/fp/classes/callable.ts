@@ -6,7 +6,7 @@ import { Class } from 'type-fest'
  * const a = callable(class A {})
  * a() // A
  */
-const callable = <C extends any, A extends Array<any>>(Class: Class<C,A>) => {
+const callable = <C extends unknown, A extends Array<unknown>>(Class: Class<C,A>) => {
   const factoryFunction = (...args: A) => new Class(...args)
 
   // tslint:disable-next-line: no-object-mutation

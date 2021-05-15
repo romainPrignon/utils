@@ -1,7 +1,7 @@
 import { expectType } from 'tsd'
 
 // test
-import { Fun, Optional, Mutable, Immutable } from './index.d'
+import { Fun, Optional, Mutable } from './index.d'
 // tslint:disable-next-line: no-duplicate-imports
 import * as Utils from './index.d'
 
@@ -11,7 +11,7 @@ describe('index', () => {
 
   describe('Utils', () => {
     it('should export Fun type', () => {
-      expectType<() => {}>(id<Utils.Fun<Array<any>, any>>())
+      expectType<() => unknown>(id<Utils.Fun<Array<unknown>, unknown>>())
     })
     it('should export Optional type', () => {
       expectType<number|undefined>(id<Utils.Optional<number>>())
@@ -34,7 +34,7 @@ describe('index', () => {
 
   describe('Fun', () => {
     it('should export Fun type', () => {
-      expectType<() => {}>(id<Fun<Array<any>, any>>())
+      expectType<() => unknown>(id<Fun<Array<unknown>, unknown>>())
     })
   })
 

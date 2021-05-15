@@ -10,7 +10,7 @@ import l from 'lodash'
  * const instanceOfA = instanceOf(A)
  * if (instanceOfA(new A())) // true
  */
-const instanceOf = l.curry<Class<any>, any, boolean>((Class: Class<any>, value: any): boolean =>
+const instanceOf = l.curry<Class<unknown>, unknown, boolean>((Class: Class<unknown>, value: unknown): boolean =>
   value instanceof Class
 )
 
