@@ -50,6 +50,7 @@
     "lodash": "^4.17.20",
     "make-error-cause": "^2.3",
     "runtypes": "^5.0",
+    "type-fest": "^1.1.1",
     "zod": "^1.11.11"
   },
   "devDependencies": {

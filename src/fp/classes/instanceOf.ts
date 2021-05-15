@@ -1,4 +1,4 @@
-import { Class } from '../../../type'
+import { Class } from 'type-fest'
 
 import l from 'lodash'
 
@@ -10,7 +10,7 @@ import l from 'lodash'
  * const instanceOfA = instanceOf(A)
  * if (instanceOfA(new A())) // true
  */
-const instanceOf = l.curry<Class<any, any>, any, boolean>((Class: Class<any, any>, value: any): boolean =>
+const instanceOf = l.curry<Class<any>, any, boolean>((Class: Class<any>, value: any): boolean =>
   value instanceof Class
 )
 

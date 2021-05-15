@@ -1,4 +1,4 @@
-import { Class } from '../../../type'
+import { Class } from 'type-fest'
 
 /**
  * return callable function from a Class
@@ -6,7 +6,7 @@ import { Class } from '../../../type'
  * const a = callable(class A {})
  * a() // A
  */
-const callable = <A extends Array<any>, R extends any>(Class: Class<A,R>) => {
+const callable = <T extends any, A extends Array<any>>(Class: Class<T,A>) => {
   const factoryFunction = (...args: A) => new Class(...args)
 
   // tslint:disable-next-line: no-object-mutation

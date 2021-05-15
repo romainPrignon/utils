@@ -1,7 +1,7 @@
 import { expectType } from 'tsd'
 
 // test
-import { Class, Fun, Optional, Mutable, Immutable } from './index.d'
+import { Fun, Optional, Mutable, Immutable } from './index.d'
 // tslint:disable-next-line: no-duplicate-imports
 import * as Utils from './index.d'
 
@@ -10,10 +10,6 @@ const id = <T>(): T => ({}) as T
 describe('index', () => {
 
   describe('Utils', () => {
-    it('should export Class type', () => {
-      const t = class {}
-      expectType<typeof t>(id<Utils.Class<any, any>>())
-    })
     it('should export Fun type', () => {
       expectType<() => {}>(id<Utils.Fun<Array<any>, any>>())
     })
@@ -33,13 +29,6 @@ describe('index', () => {
       type ImmutableFoo = {readonly bar: string}
 
       expectType<ImmutableFoo>(id<Utils.Immutable<typeof mutableFoo>>())
-    })
-  })
-
-  describe('Class', () => {
-    it('should export Class type', () => {
-      const t = class {}
-      expectType<typeof t>(id<Class<any, any>>())
     })
   })
 
