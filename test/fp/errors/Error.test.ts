@@ -21,5 +21,11 @@ describe('fp/errors/index.ts', () => {
       expect(error.cause).toEqual(err)
       expect(error.code).toEqual(code)
     })
+
+    it('should behave like normal Error', () => {
+      const error = Error(message)
+
+      expect(error).toBeInstanceOf(Error)
+    })
   })
 })

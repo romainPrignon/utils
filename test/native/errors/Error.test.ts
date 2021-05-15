@@ -19,5 +19,11 @@ describe('native/errors/index.ts', () => {
 
       expect(error).toBeInstanceOf(Error)
     })
+
+    it('should behave like normal Error', () => {
+      const error = new Error(message)
+
+      expect(error).toBeInstanceOf(Error)
+    })
   })
 })

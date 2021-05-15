@@ -1,18 +1,18 @@
 import { BaseError } from 'make-error-cause'
 
 
-export type ErrorOption = {
+type ErrorOptions = {
   cause?: Error | globalThis.Error
-  code: string
+  code?: string
 }
 
 class Error extends BaseError {
-  code: string
+  code?: string
 
-  constructor (message: string, opt: ErrorOption) {
-    super(message, opt.cause)
+  constructor (message: string, opt?: ErrorOptions) {
+    super(message, opt?.cause)
 
-    this.code = opt.code
+    this.code = opt?.code
   }
 }
 
