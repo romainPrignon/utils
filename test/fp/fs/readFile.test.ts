@@ -1,11 +1,9 @@
-import { Error } from '../../../src/fp/errors'
-
 // test
 import { readFile } from '../../../src/fp/fs/readFile'
 
 // mock
 import fs from 'fs/promises'
-jest.mock('fs')
+jest.mock('fs/promises')
 
 afterEach(() => {
   jest.restoreAllMocks()
@@ -31,50 +29,24 @@ describe('fp/fs/readFile.ts', () => {
       expect(res).toEqual(content)
     })
 
-    it('should return file content with specified encoding', async () => {
+    it('should throw instance of Error', async () => {
       // Arrange
       const path = 'path'
-      const encoding = 'utf8'
-      const content = 'content'
+      const message = 'some-message'
+      const rootError = new Error(message)
 
       // Mock
       jest.spyOn(fs, 'readFile').mockImplementation(async () => {
-        return content
-      })
-
-      // Act
-      const res = await readFile(path, { encoding })
-
-      // Assert
-      expect(res).toEqual(content)
-    })
-
-    it('should throw FileNotFoundError', async () => {
-      // Arrange
-      const path = 'path'
-      const err = Error('ENOENT', { code: 'ENOENT' })
-
-      // Mock
-      jest.spyOn(fs, 'readFile').mockImplementation(async () => {
-        throw err
+        throw rootError
       })
 
       // Act Assert
-      await expect(readFile(path)).rejects.toEqual(err)
-    })
-
-    it('should throw Error in any other case', async () => {
-      // Arrange
-      const path = 'path'
-      const err = Error('NOTENOENT', { code: 'NOTENOENT' })
-
-      // Mock
-      jest.spyOn(fs, 'readFile').mockImplementation(async () => {
-        throw err
-      })
-
-      // Act Assert
-      await expect(readFile(path)).rejects.toEqual(err)
+      try {
+        await readFile(path)
+      } catch (err) {
+        expect(err.message).toEqual(rootError.message)
+        expect(err.cause).toEqual(rootError)
+      }
     })
   })
 })
