@@ -29,6 +29,11 @@ See [dist/index.d.ts](dist/index.d.ts)
 See [package.json](package.json) scripts section
 
 ### Principles
+- import dir instead of file. Easier in case of renaming
+```js
+import { may } from '../functions/may' // bad
+import { may } from '../functions' // good
+```
 - keep standard function signature as much as possible
 - prefer type over defensive programming
 ```js
