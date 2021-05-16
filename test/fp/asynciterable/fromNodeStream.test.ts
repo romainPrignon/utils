@@ -50,12 +50,12 @@ describe('fp/asynciterable/fromNodeStream.ts', () => {
       expect(fun()).toBeInstanceOf(AsyncIterable)
 
       // Assert
-      fun().map(val => val.toString()).forEach(val => expect(val).toEqual('1'))
+      await fun().map(val => val.toString()).forEach(val => expect(val).toEqual('1'))
     })
 
     it('should make result iterable fromNodeStream generator', async () => {
       // Arrange
-      const source = async function* () {
+      const source = async function* (): AsyncGenerator<number> {
         yield 1
       }
 
@@ -65,8 +65,7 @@ describe('fp/asynciterable/fromNodeStream.ts', () => {
       expect(fun()).toBeInstanceOf(AsyncIterable)
 
       // Assert
-      fun().map(val => val.toString()).forEach(val => expect(val).toEqual('1'))
-
+      await fun().map(val => val.toString()).forEach(val => expect(val).toEqual('1'))
     })
   })
 })

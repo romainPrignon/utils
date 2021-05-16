@@ -54,6 +54,7 @@ describe('native/asynciterable/from.ts', () => {
       const res2 = fun()
         .map(val => val + 1)
 
+      // tslint:disable-next-line: await-promise
       for await (const val of res2) {
         expect(val).toEqual(2)
       }
@@ -61,7 +62,7 @@ describe('native/asynciterable/from.ts', () => {
 
     it('should make result iterable from generator', async () => {
       // Arrange
-      const source = async function* () {
+      const source = async function* (): AsyncGenerator<number> {
         yield 1
       }
 
@@ -76,6 +77,7 @@ describe('native/asynciterable/from.ts', () => {
       const res2 = fun()
         .map(val => val + 1)
 
+      // tslint:disable-next-line: await-promise
       for await (const val of res2) {
         expect(val).toEqual(2)
       }

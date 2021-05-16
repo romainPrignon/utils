@@ -55,6 +55,7 @@ describe('native/asynciterable/fromNodeStream.ts', () => {
       const res2 = fun()
         .map(val => val.toString())
 
+      // tslint:disable-next-line: await-promise (https://github.com/palantir/tslint/issues/3997)
       for await (const val of res2) {
         expect(val).toEqual('1')
       }
@@ -62,7 +63,7 @@ describe('native/asynciterable/fromNodeStream.ts', () => {
 
     it('should make result iterable fromNodeStream generator', async () => {
       // Arrange
-      const source = async function* () {
+      const source = async function* (): AsyncGenerator<number> {
         yield 1
       }
 
@@ -77,6 +78,7 @@ describe('native/asynciterable/fromNodeStream.ts', () => {
       const res2 = fun()
         .map(val => val.toString())
 
+      // tslint:disable-next-line: await-promise
       for await (const val of res2) {
         expect(val).toEqual('1')
       }
