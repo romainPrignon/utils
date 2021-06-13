@@ -14,7 +14,7 @@ describe('fp/functions/errorify.ts', () => {
     })
 
     it('should be typed correctly for function returning parameter', () => {
-      const fun = errorify((a) => a)
+      const fun = errorify(async (a) => a)
       expectType<(...args: Array<unknown>) => Promise<unknown>>(fun)
 
       const res = fun(1)
@@ -44,7 +44,7 @@ describe('fp/functions/errorify.ts', () => {
     })
 
     it('should not change input', async () => {
-      const fun = errorify((a) => a)
+      const fun = errorify(async (a) => a)
 
       expect(await fun(1)).toEqual(1)
     })
