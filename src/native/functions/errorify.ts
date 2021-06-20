@@ -1,7 +1,7 @@
-import { AsyncFun } from '../../../type'
+import { AsyncFun, UnknownArgs, UnknownReturns } from '../../../type'
 import { Error } from '../errors'
 
-type Errorify = <A extends Array<unknown>, R extends unknown>(fun: AsyncFun<A, R>) => (...args: A) => Promise<R>
+type Errorify = <A extends UnknownArgs, R extends UnknownReturns>(fun: AsyncFun<A, R>) => (...args: A) => Promise<R>
 const errorify: Errorify = (fun) => async (...args) => {
   try {
     return await fun(...args)
