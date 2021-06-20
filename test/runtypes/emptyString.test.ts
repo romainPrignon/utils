@@ -14,7 +14,7 @@ describe('emptyString.ts', () => {
     })
 
     it('should handle check', () => {
-      expect(() => EmptyString.check('a')).toThrow(new r.ValidationError('Failed constraint check'))
+      expect(() => EmptyString.check('a')).toThrowError('Failed constraint check for unknown')
       expect(EmptyString.check('')).toEqual('')
     })
 
@@ -26,7 +26,7 @@ describe('emptyString.ts', () => {
 
     it('should handle validate', () => {
       expectType<r.Result<string>>(EmptyString.validate('a'))
-      expect(EmptyString.validate('a')).toEqual({ 'message': 'Failed constraint check', 'success': false })
+      expect(EmptyString.validate('a')).toEqual({ code: 'CONSTRAINT_FAILED', 'message': 'Failed constraint check for unknown', 'success': false })
       expect(EmptyString.validate('')).toEqual({ 'success': true, 'value': '' })
     })
   })

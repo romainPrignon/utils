@@ -11,19 +11,11 @@ describe('zod/promise.ts', () => {
       expectType<z.ZodType<Promise<number>>>(zod.Promise(z.number()))
     })
 
-    it('should handle check', async () => {
-      const numberPromise = zod.Promise(z.number())
-
-      expectType<boolean>(numberPromise.check(Promise.resolve(1)))
-      expect(numberPromise.check(1)).toEqual(false)
-      expect(numberPromise.check(Promise.resolve(1))).toEqual(true)
-    })
-
     it('should handle parse', async () => {
       const numberPromise = zod.Promise(z.number())
       const zodError = {
+        code: z.ZodIssueCode.custom,
         message: 'Expect Promise',
-        code: z.ZodErrorCode.custom_error,
         path: []
       }
 
@@ -36,8 +28,8 @@ describe('zod/promise.ts', () => {
       const numberPromise = zod.Promise(z.number())
 
       const zodError = {
+        code: z.ZodIssueCode.custom,
         message: 'Expect Promise',
-        code: z.ZodErrorCode.custom_error,
         path: []
       }
 

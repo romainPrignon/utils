@@ -48,11 +48,11 @@ describe('fp/fs/createReadStream.ts', () => {
       // Assert
       expect(output).toBeInstanceOf(AsyncIterable)
 
-      let res = ''
-      await output.forEach((o: string | Buffer) => {
-        res += o.toString()
+      const res = await output.reduce({
+        callback: (acc: string, o: string | Buffer) => acc + o.toString()
       })
-      expect(res).toEqual(`${some}${content}`)
+
+      expect(res.toString()).toEqual(`${some}${content}`)
     })
   })
 })

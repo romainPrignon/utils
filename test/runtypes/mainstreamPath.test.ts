@@ -15,8 +15,8 @@ describe('mainstreamPath.ts', () => {
     })
 
     it('should handle check', () => {
-      expect(() => MainstreamPath.check('')).toThrow(new r.ValidationError('Failed constraint check'))
-      expect(() => MainstreamPath.check('a')).toThrow(new r.ValidationError('Failed constraint check'))
+      expect(() => MainstreamPath.check('')).toThrowError('Failed constraint check for unknown')
+      expect(() => MainstreamPath.check('a')).toThrowError('Failed constraint check for unknown')
       expect(MainstreamPath.check('/a')).toEqual('/a')
     })
 
@@ -27,8 +27,8 @@ describe('mainstreamPath.ts', () => {
     })
 
     it('should handle validate', () => {
-      expect(MainstreamPath.validate('')).toEqual({ 'message': 'Failed constraint check', 'success': false })
-      expect(MainstreamPath.validate('a')).toEqual({ 'message': 'Failed constraint check', 'success': false })
+      expect(MainstreamPath.validate('')).toEqual({ code: 'CONSTRAINT_FAILED', 'message': 'Failed constraint check for unknown', 'success': false })
+      expect(MainstreamPath.validate('a')).toEqual({ code: 'CONSTRAINT_FAILED', 'message': 'Failed constraint check for unknown', 'success': false })
       expect(MainstreamPath.validate('/a')).toEqual({ 'success': true, 'value': '/a' })
     })
   })
