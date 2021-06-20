@@ -18,7 +18,7 @@ describe('fp/classes/instanceOf.ts', () => {
       const a = new A()
       const instanceOfA = instanceOf(A)
 
-      expectType<(val: any) => boolean>(instanceOfA)
+      expectType<(val: unknown) => boolean>(instanceOfA)
       expectType<boolean>(instanceOfA(a))
     })
 
