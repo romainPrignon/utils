@@ -8,7 +8,6 @@ type FromNodeStream = <A extends UnknownArgs>
 const fromNodeStream: FromNodeStream = (fun) => (...args) =>
   ix.fromNodeStream(fun(...args))
     .catchError((err) => {
-      /* istanbul ignore next */
       throw new Error(err.message, { code: err.code, cause: err })
     })
 

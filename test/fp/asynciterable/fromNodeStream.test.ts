@@ -2,6 +2,7 @@ import { expectType } from 'tsd'
 import { AsyncIterable } from 'ix'
 import ix from 'ix/asynciterable'
 import { Readable } from 'stream'
+import _ from 'lodash'
 
 // test
 import { fromNodeStream } from '../../../src/fp/asynciterable/fromNodeStream'
@@ -66,6 +67,45 @@ describe('fp/asynciterable/fromNodeStream.ts', () => {
 
       // Assert
       await fun().map(val => val.toString()).forEach(val => expect(val).toEqual('1'))
+    })
+
+    it('should catch error from source stream', async () => {
+      const expectedErr = new Error()
+
+      // Arrange
+      const source = async function* (): AsyncGenerator<number> {
+        throw expectedErr
+      }
+
+      const fun = fromNodeStream(() => Readable.from(source()))
+
+      // Act
+      try {
+        await fun().forEach(_.noop)
+
+        throw new Error('should never happened')
+      } catch (err) {
+        // Assert
+        expect(err).toEqual(expectedErr)
+      }
+    })
+
+    it('should catch error', async () => {
+      const expectedErr = new Error()
+
+      // Arrange
+      const fun = fromNodeStream(() => { throw expectedErr })
+
+      // Act
+
+      try {
+        await fun().forEach(_.noop)
+
+        throw new Error('should never happened')
+      } catch (err) {
+        // Assert
+        expect(err).toEqual(expectedErr)
+      }
     })
   })
 })
