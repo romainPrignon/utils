@@ -15,9 +15,9 @@ npm install --save @romainprignon/utils
 Way to import utils
 ```js
 import * as utils from '@romainprignon/utils'
-import {native, fp} from '@romainprignon/utils'
-import * as native from '@romainprignon/utils/native'
-import {fs} from '@romainprignon/utils/native'
+import {oop, fp} from '@romainprignon/utils'
+import * as oop from '@romainprignon/utils/oop'
+import {fs} from '@romainprignon/utils/oop'
 import {readFile} from '@romainprignon/utils/fp/fs'
 ```
 

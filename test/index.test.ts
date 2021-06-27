@@ -1,5 +1,5 @@
 // test
-import { fp, native, runtypes, zod } from '../src'
+import { fp, oop, runtypes, zod } from '../src'
 // tslint:disable-next-line: no-duplicate-imports
 import * as Utils from '../src'
 
@@ -9,7 +9,7 @@ describe('index', () => {
   describe('Utils', () => {
     it('should export namespaces', () => {
       expect(Utils.fp).toBeDefined()
-      expect(Utils.native).toBeDefined()
+      expect(Utils.oop).toBeDefined()
       expect(Utils.runtypes).toBeDefined()
       expect(Utils.zod).toBeDefined()
     })
@@ -31,19 +31,19 @@ describe('index', () => {
     })
   })
 
-  describe('native', () => {
-    it('should export native namespace', () => {
-      expect(Object.entries(native).length).toEqual(10)
+  describe('oop', () => {
+    it('should export oop namespace', () => {
+      expect(Object.entries(oop).length).toEqual(10)
 
-      expect(native.arrays).toBeDefined()
-      expect(native.classes).toBeDefined()
-      expect(native.dates).toBeDefined()
-      expect(native.errors).toBeDefined()
-      expect(native.fs).toBeDefined()
-      expect(native.functions).toBeDefined()
-      expect(native.numbers).toBeDefined()
-      expect(native.objects).toBeDefined()
-      expect(native.strings).toBeDefined()
+      expect(oop.arrays).toBeDefined()
+      expect(oop.classes).toBeDefined()
+      expect(oop.dates).toBeDefined()
+      expect(oop.errors).toBeDefined()
+      expect(oop.fs).toBeDefined()
+      expect(oop.functions).toBeDefined()
+      expect(oop.numbers).toBeDefined()
+      expect(oop.objects).toBeDefined()
+      expect(oop.strings).toBeDefined()
     })
   })
 
