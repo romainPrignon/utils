@@ -11,7 +11,6 @@ afterEach(() => {
 
 describe('fp/fs/readFile.ts', () => {
   describe('readFile()', () => {
-
     it('should return file content with utf8 encoding', async () => {
       // Arrange
       const path = 'path'

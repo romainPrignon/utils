@@ -5,7 +5,6 @@ import * as fs from '../../../src/oop/fs'
 
 
 describe('fs', () => {
-
   it('should export fs namespace', () => {
     expect(Object.entries(fs).length).toEqual(2)
 

@@ -5,7 +5,6 @@ import * as Utils from '../src'
 
 
 describe('index', () => {
-
   describe('Utils', () => {
     it('should export namespaces', () => {
       expect(Utils.fp).toBeDefined()

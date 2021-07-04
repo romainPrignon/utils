@@ -1,8 +1,9 @@
 import is from '@sindresorhus/is'
 import * as r from 'runtypes'
 
+type RuntypeConstraint<R extends r.Runtype> = r.Constraint<r.Unknown, Promise<r.Static<R>>, unknown>
 
-const Promise = <R extends r.Runtype>(runtype: R) => {
+const Promise = <R extends r.Runtype>(_runtype: R): RuntypeConstraint<R> => {
   const guard = r.Guard((val: unknown): val is Promise<r.Static<R>> =>
     is.promise(val)
   )
@@ -10,7 +11,7 @@ const Promise = <R extends r.Runtype>(runtype: R) => {
   return {
     ...guard,
     name: 'Promise',
-    tag: 'promise'
+    tag: 'promise' as 'constraint'
   }
 }
 

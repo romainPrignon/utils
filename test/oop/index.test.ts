@@ -5,7 +5,6 @@ import * as Native from '../../src/oop'
 
 
 describe('oop', () => {
-
   it('should export Native namespace', () => {
     expect(Object.entries(Native).length).toEqual(10)
 

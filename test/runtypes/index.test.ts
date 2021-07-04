@@ -5,7 +5,6 @@ import * as Runtype from '../../src/runtypes'
 
 
 describe('runtype', () => {
-
   it('should export Runtype namespace', () => {
     expect(Object.entries(Runtype).length).toEqual(1)
     expect(Runtype.Promise).toBeDefined()

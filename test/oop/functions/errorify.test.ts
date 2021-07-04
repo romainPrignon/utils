@@ -7,7 +7,6 @@ import { errorify } from '../../../src/oop/functions/errorify'
 
 describe('oopnctions/errorify.ts', () => {
   describe('errorify()', () => {
-
     it('should be typed correctly for simple function', () => {
       const rootError = new Error()
       const fun = errorify(() => { throw rootError })

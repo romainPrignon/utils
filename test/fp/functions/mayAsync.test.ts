@@ -7,7 +7,6 @@ import { mayAsync } from '../../../src/fp/functions/mayAsync'
 
 describe('fp/functions/mayAsync.ts', () => {
   describe('mayAsync()', () => {
-
     it('should be typed as R1 | Error', () => {
       expectType<Promise<number | Error>>(mayAsync(async () => 1))
     })

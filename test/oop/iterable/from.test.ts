@@ -8,7 +8,6 @@ import { from } from '../../../src/oop/iterable/from'
 
 describe('oop/iterable/from.ts', () => {
   describe('from()', () => {
-
     it('should be typed correctly for simple function', async () => {
       const fun = from(() => [1])
       expectType<() => ix.IterableX<number>>(fun)
@@ -61,7 +60,7 @@ describe('oop/iterable/from.ts', () => {
 
     it('should make result iterable from generator', () => {
       // Arrange
-      const source = function* (): Generator<number> {
+      const source = function * (): Generator<number> {
         yield 1
       }
 

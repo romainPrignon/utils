@@ -10,7 +10,6 @@ import { fromNodeStream } from '../../../src/fp/asynciterable/fromNodeStream'
 
 describe('fp/asynciterable/fromNodeStream.ts', () => {
   describe('fromNodeStream()', () => {
-
     it('should be typed correctly for simple function', async () => {
       const fun = fromNodeStream(() => Readable.from([]))
       expectType<() => ix.AsyncIterableX<string | Buffer>>(fun)
@@ -56,7 +55,7 @@ describe('fp/asynciterable/fromNodeStream.ts', () => {
 
     it('should make result iterable fromNodeStream generator', async () => {
       // Arrange
-      const source = async function* (): AsyncGenerator<number> {
+      const source = async function * (): AsyncGenerator<number> {
         yield 1
       }
 
@@ -73,7 +72,7 @@ describe('fp/asynciterable/fromNodeStream.ts', () => {
       const expectedErr = new Error()
 
       // Arrange
-      const source = async function* (): AsyncGenerator<number> {
+      const source = async function * (): AsyncGenerator<number> {
         throw expectedErr
       }
 

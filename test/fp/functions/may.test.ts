@@ -7,7 +7,6 @@ import { may } from '../../../src/fp/functions/may'
 
 describe('fp/functions/may.ts', () => {
   describe('may()', () => {
-
     it('should be typed as R1 | Error', () => {
       expectType<number | Error>(may(() => 1))
     })

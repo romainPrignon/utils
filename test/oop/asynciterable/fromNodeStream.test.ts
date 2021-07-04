@@ -10,7 +10,6 @@ import { fromNodeStream } from '../../../src/oop/asynciterable/fromNodeStream'
 
 describe('oopynciterable/fromNodeStream.ts', () => {
   describe('fromNodeStream()', () => {
-
     it('should be typed correctly for simple function', async () => {
       const fun = fromNodeStream(() => Readable.from([]))
       expectType<() => ix.AsyncIterableX<string | Buffer>>(fun)
@@ -64,7 +63,7 @@ describe('oopynciterable/fromNodeStream.ts', () => {
 
     it('should make result iterable fromNodeStream generator', async () => {
       // Arrange
-      const source = async function* (): AsyncGenerator<number> {
+      const source = async function * (): AsyncGenerator<number> {
         yield 1
       }
 
@@ -89,7 +88,7 @@ describe('oopynciterable/fromNodeStream.ts', () => {
       const expectedErr = new Error()
 
       // Arrange
-      const source = async function* (): AsyncGenerator<number> {
+      const source = async function * (): AsyncGenerator<number> {
         throw expectedErr
       }
 

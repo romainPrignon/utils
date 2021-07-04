@@ -23,11 +23,11 @@ describe('oopta/mut.ts', () => {
       // array.push(2) // OK
       // object.a = 'c' // OK
 
-      const res1 = imut(mut(array))
-      const res2 = imut(mut(object))
+      const _res1 = imut(mut(array))
+      const _res2 = imut(mut(object))
 
-      // res1.push(2) // NOK
-      // res2.a = 'c' // NOK
+      // _res1.push(2) // NOK
+      // _res2.a = 'c' // NOK
     })
   })
 })

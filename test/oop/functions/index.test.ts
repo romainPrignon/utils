@@ -5,7 +5,6 @@ import * as functions from '../../../src/oop/functions'
 
 
 describe('functions', () => {
-
   it('should export functions namespace', () => {
     expect(Object.entries(functions).length).toEqual(2)
 

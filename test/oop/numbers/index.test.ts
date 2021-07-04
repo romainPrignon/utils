@@ -5,7 +5,6 @@ import * as numbers from '../../../src/oop/numbers'
 
 
 describe('numbers', () => {
-
   it('should export numbers namespace', () => {
     expect(Object.entries(numbers).length).toEqual(1)
 

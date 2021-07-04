@@ -16,7 +16,6 @@ afterEach(() => {
 
 describe('fp/fs/createReadStream.ts', () => {
   describe('createReadStream()', () => {
-
     it('should be typed correctly', () => {
       // Mock
       jest.spyOn(fs, 'createReadStream').mockImplementation(() => {

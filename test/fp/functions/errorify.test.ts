@@ -6,7 +6,6 @@ import { errorify } from '../../../src/fp/functions/errorify'
 
 describe('fp/functions/errorify.ts', () => {
   describe('errorify()', () => {
-
     it('should be typed correctly for simple function', () => {
       const rootError = new Error()
       const fun = errorify(() => { throw rootError })

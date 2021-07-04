@@ -34,8 +34,8 @@ describe('nonEmptyArray.ts', () => {
     it('should handle validate', () => {
       const nonEmptyArray = Runtype.NonEmptyArray(r.Number)
 
-      expect(nonEmptyArray.validate([])).toEqual({ code: 'CONSTRAINT_FAILED', 'message': 'Failed constraint check for unknown', 'success': false })
-      expect(nonEmptyArray.validate([1])).toEqual({ 'success': true, 'value': [1] })
+      expect(nonEmptyArray.validate([])).toEqual({ code: 'CONSTRAINT_FAILED', message: 'Failed constraint check for unknown', success: false })
+      expect(nonEmptyArray.validate([1])).toEqual({ success: true, value: [1] })
     })
   })
 })

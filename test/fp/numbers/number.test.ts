@@ -1,5 +1,3 @@
-import { expectType } from 'tsd'
-
 // test
 import { isMultipleOf } from '../../../src/fp/numbers/number'
 

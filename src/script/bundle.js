@@ -3,7 +3,7 @@
 const { resolve } = require('path')
 const shell = require('child_process').execSync
 
-const [bundleDir, ...rest] = process.argv.slice(2)
+const [bundleDir, ..._rest] = process.argv.slice(2)
 const pkg = require(resolve('package.json'))
 
 shell(`rm -rf ${bundleDir}`)

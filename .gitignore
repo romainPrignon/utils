@@ -3,4 +3,5 @@ dist/
 coverage/
 node_modules/
 
+.eslintcache
 npm-debug.log

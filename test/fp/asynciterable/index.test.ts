@@ -5,7 +5,6 @@ import * as asynciterable from '../../../src/fp/asynciterable'
 
 
 describe('asynciterable', () => {
-
   it('should export asynciterable namespace', () => {
     expect(Object.entries(asynciterable).length).toEqual(2)
 

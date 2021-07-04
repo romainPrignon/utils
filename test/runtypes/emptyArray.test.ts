@@ -26,8 +26,8 @@ describe('emptyArray.ts', () => {
 
     it('should handle validate', () => {
       expectType<r.Result<Array<never>>>(EmptyArray.validate([]))
-      expect(EmptyArray.validate(['a'])).toEqual({ code: 'CONSTRAINT_FAILED', 'message': 'Failed constraint check for unknown', 'success': false })
-      expect(EmptyArray.validate([])).toEqual({ 'success': true, 'value': [] })
+      expect(EmptyArray.validate(['a'])).toEqual({ code: 'CONSTRAINT_FAILED', message: 'Failed constraint check for unknown', success: false })
+      expect(EmptyArray.validate([])).toEqual({ success: true, value: [] })
     })
   })
 })

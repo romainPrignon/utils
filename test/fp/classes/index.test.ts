@@ -5,7 +5,6 @@ import * as classes from '../../../src/fp/classes'
 
 
 describe('classes', () => {
-
   it('should export classes namespace', () => {
     expect(Object.entries(classes).length).toEqual(2)
 

@@ -35,8 +35,8 @@ describe('promise.ts', () => {
     it('should handle validate', async () => {
       const numberPromise = Runtype.Promise(r.Number)
 
-      expect(numberPromise.validate(1)).toEqual({ code: 'CONSTRAINT_FAILED', 'message': 'Failed constraint check for unknown', 'success': false })
-      expect(numberPromise.validate(Promise.resolve(1))).toEqual({ 'success': true, 'value': Promise.resolve({}) })
+      expect(numberPromise.validate(1)).toEqual({ code: 'CONSTRAINT_FAILED', message: 'Failed constraint check for unknown', success: false })
+      expect(numberPromise.validate(Promise.resolve(1))).toEqual({ success: true, value: Promise.resolve({}) })
     })
   })
 })

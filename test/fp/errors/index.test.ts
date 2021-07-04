@@ -5,7 +5,6 @@ import * as errors from '../../../src/fp/errors'
 
 
 describe('errors', () => {
-
   it('should export errors namespace', () => {
     expect(Object.entries(errors).length).toEqual(1)
 

@@ -5,7 +5,6 @@ import * as fp from '../../src/fp'
 
 
 describe('fp', () => {
-
   it('should export fp namespace', () => {
     expect(Object.entries(fp).length).toEqual(10)
 

@@ -26,8 +26,8 @@ describe('nonEmptyString.ts', () => {
 
     it('should handle validate', () => {
       expectType<r.Result<string>>(NonEmptyString.validate('a'))
-      expect(NonEmptyString.validate(1)).toEqual({ code: 'CONSTRAINT_FAILED', 'message': 'Failed constraint check for unknown', 'success': false })
-      expect(NonEmptyString.validate('a')).toEqual({ 'success': true, 'value': 'a' })
+      expect(NonEmptyString.validate(1)).toEqual({ code: 'CONSTRAINT_FAILED', message: 'Failed constraint check for unknown', success: false })
+      expect(NonEmptyString.validate('a')).toEqual({ success: true, value: 'a' })
     })
   })
 })

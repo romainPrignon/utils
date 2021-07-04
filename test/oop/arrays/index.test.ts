@@ -5,7 +5,6 @@ import * as arrays from '../../../src/oop/arrays'
 
 
 describe('arrays', () => {
-
   it('should export arrays namespace', () => {
     expect(Object.entries(arrays).length).toEqual(2)
 

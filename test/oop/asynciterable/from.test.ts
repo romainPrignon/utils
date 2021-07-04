@@ -8,7 +8,6 @@ import { from } from '../../../src/oop/asynciterable/from'
 
 describe('oopynciterable/from.ts', () => {
   describe('from()', () => {
-
     it('should be typed correctly for simple function', async () => {
       const fun = from(() => [1])
       expectType<() => ix.AsyncIterableX<number>>(fun)
@@ -62,7 +61,7 @@ describe('oopynciterable/from.ts', () => {
 
     it('should make result iterable from generator', async () => {
       // Arrange
-      const source = async function* (): AsyncGenerator<number> {
+      const source = async function * (): AsyncGenerator<number> {
         yield 1
       }
 

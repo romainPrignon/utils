@@ -5,7 +5,6 @@ import * as data from '../../../src/fp/data'
 
 
 describe('data', () => {
-
   it('should export data namespace', () => {
     expect(Object.entries(data).length).toEqual(2)
 

@@ -4,7 +4,7 @@ import * as ixAsync from 'ix/asynciterable'
 import { Error } from '../error/Error'
 
 type FromNodeStream = <A extends UnknownArgs>
-  (fun: Fun<A, NodeJS.ReadableStream>) => (...args: A) => ixAsync.AsyncIterableX<string | Buffer>
+  (fun: Fun<A, NodeJS.ReadableStream>) => (...args: A) => ixAsync.AsyncIterableX<string | Buffer> // eslint-disable-line no-undef
 const fromNodeStream: FromNodeStream = (fun) => (...args) =>
   ix.fromNodeStream(fun(...args))
     .catchError((err) => {

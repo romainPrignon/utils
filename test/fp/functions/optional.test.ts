@@ -8,7 +8,6 @@ import { optional } from '../../../src/fp/functions/optional'
 
 describe('fp/functions/optional.ts', () => {
   describe('optional()', () => {
-
     it('should be typed correctly for simple function', () => {
       const opt = optional(() => 1)
       expectType<(...args: Array<never>) => Optional<number>>(opt)

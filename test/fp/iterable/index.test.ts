@@ -5,7 +5,6 @@ import * as iterable from '../../../src/fp/iterable'
 
 
 describe('iterable', () => {
-
   it('should export iterable namespace', () => {
     expect(Object.entries(iterable).length).toEqual(1)
 
