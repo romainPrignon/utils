@@ -1,5 +1,5 @@
 // test
-import { fp, oop, zod } from '../src'
+import { fp, oop, struct } from '../src'
 // tslint:disable-next-line: no-duplicate-imports
 import * as Utils from '../src'
 
@@ -9,7 +9,7 @@ describe('index', () => {
     it('should export namespaces', () => {
       expect(Utils.fp).toBeDefined()
       expect(Utils.oop).toBeDefined()
-      expect(Utils.zod).toBeDefined()
+      expect(Utils.struct).toBeDefined()
     })
   })
 
@@ -45,9 +45,12 @@ describe('index', () => {
     })
   })
 
-  describe('zod', () => {
-    it('should export zod namespace', () => {
-      expect(zod.Promise).toBeDefined()
+  describe('struct', () => {
+    it('should export struct namespace', () => {
+      expect(struct.Promise).toBeDefined()
+      expect(struct.EmptyArray).toBeDefined()
+      expect(struct.EmptyString).toBeDefined()
+      expect(struct.NonEmptyArray).toBeDefined()
     })
   })
 })
