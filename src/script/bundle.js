@@ -16,5 +16,5 @@ pkg.assets.forEach(asset => {
 })
 
 Object.values(pkg.bin).forEach(bin => {
-  shell(`chmod a+x ${bundleDir}/${bin}`)
+  shell(`chmod a+x ${bin}`)
 })

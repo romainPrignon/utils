@@ -24,14 +24,14 @@
     "README.md"
   ],
   "bin": {
-    "bundle": "./src/script/bundle.js"
+    "bundle": "./bundle/script/bundle.js"
   },
   "scripts": {
     "postinstall": "gitmoji --init",
     "compile": "tsc -p src/",
     "lint": "eslint --cache --ext js,ts src/ test/",
     "lint:fix": "eslint --fix --ext js,ts src/ test/",
-    "test": "jest --maxWorkers=50%",
+    "test": "jest",
     "test:debug": "npm run test --detectOpenHandles --forceExit --runInBand --no-cache",
     "test:cov": "npm run test -- --coverage",
     "test:watch": "npm run test -- --watch",
