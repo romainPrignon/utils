@@ -42,7 +42,10 @@
     "version:major": "npm version --no-commit-hooks major -m '🔖 Release v%s'",
     "postversion": "git push --follow-tags",
     "bundle": "./src/script/bundle.js bundle/",
-    "deploy": "./src/script/deploy.js"
+    "deploy": "./src/script/deploy.js",
+    "ci:publish:patch": "gh workflow run publish.yml -f version=patch",
+    "ci:publish:minor": "gh workflow run publish.yml -f version=minor",
+    "ci:publish:major": "gh workflow run publish.yml -f version=major"
   },
   "dependencies": {
     "@sindresorhus/is": "^4.0.1",
