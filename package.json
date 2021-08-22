@@ -43,9 +43,9 @@
     "postversion": "git push --follow-tags",
     "bundle": "./src/script/bundle.js bundle/",
     "deploy": "./src/script/deploy.js",
-    "ci:publish:patch": "gh workflow run publish.yml -f version=patch",
-    "ci:publish:minor": "gh workflow run publish.yml -f version=minor",
-    "ci:publish:major": "gh workflow run publish.yml -f version=major"
+    "ci:publish:patch": "gh workflow run publish.yml -f version=patch -f",
+    "ci:publish:minor": "gh workflow run publish.yml -f version=minor -f",
+    "ci:publish:major": "gh workflow run publish.yml -f version=major -f"
   },
   "dependencies": {
     "@sindresorhus/is": "^4.0.1",
