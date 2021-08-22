@@ -1,15 +1,5 @@
 # Changelog
 
-<a name="2.0.0"></a>
-## 2.0.0 (2021-02-06)
-
-### Miscellaneous
-
-- 💥 upgrade deps to major version [[f2289dd](https://github.com/romainPrignon/utils/commit/f2289dd7b5fd2ac5a1081accc642d0dbe521ac7b)]
--  Bump acorn from 6.4.0 to 6.4.1 [[36f2bc0](https://github.com/romainPrignon/utils/commit/36f2bc063381fa55e43870975f13f680bbcce715)]
--  Bump lodash from 4.17.15 to 4.17.19 [[86f0002](https://github.com/romainPrignon/utils/commit/86f00029115ab30eccef5e15582bdc714d3e59c3)]
-
-
 <a name="1.1.1"></a>
 ## 1.1.1 (2020-02-25)
 
