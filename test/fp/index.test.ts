@@ -1,12 +1,12 @@
 // test
-import { arrays, classes, dates, errors, fs, functions, numbers, objects, strings, data } from '../../src/fp'
+import { arrays, classes, dates, errors, fs, functions, numbers, objects, strings, data, struct } from '../../src/fp'
 // tslint:disable-next-line: no-duplicate-imports
 import * as fp from '../../src/fp'
 
 
 describe('fp', () => {
   it('should export fp namespace', () => {
-    expect(Object.entries(fp).length).toEqual(10)
+    expect(Object.entries(fp).length).toEqual(11)
 
     expect(fp.arrays).toBeDefined()
     expect(fp.classes).toBeDefined()
@@ -18,6 +18,7 @@ describe('fp', () => {
     expect(fp.objects).toBeDefined()
     expect(fp.strings).toBeDefined()
     expect(fp.data).toBeDefined()
+    expect(fp.struct).toBeDefined()
   })
 
   it('should export all namespace', () => {
@@ -31,5 +32,6 @@ describe('fp', () => {
     expect(objects).toBeDefined()
     expect(strings).toBeDefined()
     expect(data).toBeDefined()
+    expect(struct).toBeDefined()
   })
 })

@@ -15,7 +15,7 @@ describe('index', () => {
 
   describe('fp', () => {
     it('should export fp namespace', () => {
-      expect(Object.entries(fp).length).toEqual(10)
+      expect(Object.entries(fp).length).toEqual(11)
 
       expect(fp.arrays).toBeDefined()
       expect(fp.classes).toBeDefined()
@@ -26,12 +26,14 @@ describe('index', () => {
       expect(fp.numbers).toBeDefined()
       expect(fp.objects).toBeDefined()
       expect(fp.strings).toBeDefined()
+      expect(fp.data).toBeDefined()
+      expect(fp.struct).toBeDefined()
     })
   })
 
   describe('oop', () => {
     it('should export oop namespace', () => {
-      expect(Object.entries(oop).length).toEqual(10)
+      expect(Object.entries(oop).length).toEqual(11)
 
       expect(oop.arrays).toBeDefined()
       expect(oop.classes).toBeDefined()
@@ -42,6 +44,8 @@ describe('index', () => {
       expect(oop.numbers).toBeDefined()
       expect(oop.objects).toBeDefined()
       expect(oop.strings).toBeDefined()
+      expect(oop.data).toBeDefined()
+      expect(oop.struct).toBeDefined()
     })
   })
 
