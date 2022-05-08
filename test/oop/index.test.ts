@@ -1,12 +1,12 @@
 // test
-import { arrays, classes, dates, errors, fs, functions, numbers, objects, strings, data } from '../../src/oop'
+import { arrays, classes, dates, errors, fs, functions, numbers, objects, strings, data, struct } from '../../src/oop'
 // tslint:disable-next-line: no-duplicate-imports
 import * as Native from '../../src/oop'
 
 
 describe('oop', () => {
   it('should export Native namespace', () => {
-    expect(Object.entries(Native).length).toEqual(10)
+    expect(Object.entries(Native).length).toEqual(11)
 
     expect(Native.arrays).toBeDefined()
     expect(Native.classes).toBeDefined()
@@ -18,6 +18,7 @@ describe('oop', () => {
     expect(Native.objects).toBeDefined()
     expect(Native.strings).toBeDefined()
     expect(Native.data).toBeDefined()
+    expect(Native.struct).toBeDefined()
   })
 
   it('should export all namespace', () => {
@@ -31,5 +32,6 @@ describe('oop', () => {
     expect(objects).toBeDefined()
     expect(strings).toBeDefined()
     expect(data).toBeDefined()
+    expect(struct).toBeDefined()
   })
 })
