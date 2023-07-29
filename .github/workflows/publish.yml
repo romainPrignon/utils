@@ -10,6 +10,9 @@ on:
         description: one time password
         required: true
 
+permissions:
+  id-token: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
