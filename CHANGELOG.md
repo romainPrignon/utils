@@ -1,13 +1,5 @@
 # Changelog
 
-<a name="1.0.2"></a>
-## 1.0.2 (2020-02-24)
-
-### Fixed
-
-- ✏️ fix typo on publish bundle command in README.md [[0fd64bf](https://github.com/romainPrignon/utils/commit/0fd64bfd858c9854eb1c586fed83520ed042bc5b)]
-
-
 <a name="1.0.1"></a>
 ## 1.0.1 (2020-02-24)
 
