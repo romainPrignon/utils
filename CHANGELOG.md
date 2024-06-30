@@ -1,14 +1,5 @@
 # Changelog
 
-<a name="0.2.0"></a>
-## 0.2.0 (2020-02-24)
-
-### Changed
-
-- ♻️ FileNotFoundError now extends Error instead of BaseError [[96f295a](https://github.com/romainPrignon/utils/commit/96f295a5736b1095a595189f17b4ed9567bb4eaa)]
-- ♻️ reuse types instead of inline ones [[0ea9ca0](https://github.com/romainPrignon/utils/commit/0ea9ca0d703ac931f5dddd4064538d0301c57afb)]
-
-
 <a name="0.1.0"></a>
 ## 0.1.0 (2020-02-24)
 
