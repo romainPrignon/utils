@@ -1,17 +1,5 @@
 # Changelog
 
-<a name="1.0.0"></a>
-## 1.0.0 (2020-02-24)
-
-### Changed
-
-- 🎨 do not use lodash for readFile in fs [[342c1e3](https://github.com/romainPrignon/utils/commit/342c1e34fe21ae2449ddc2a0557e828f9f10e223)]
-
-### Miscellaneous
-
--  👷 add bundle step to release a flat module [[d017589](https://github.com/romainPrignon/utils/commit/d017589f526ce8f15fa35c120b800f73866f52a6)]
-
-
 <a name="0.2.0"></a>
 ## 0.2.0 (2020-02-24)
 
