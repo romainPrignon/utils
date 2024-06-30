@@ -53,7 +53,6 @@ describe('oopynciterable/from.ts', () => {
       const res2 = fun()
         .map(val => val + 1)
 
-      // tslint:disable-next-line: await-promise
       for await (const val of res2) {
         expect(val).toEqual(2)
       }
@@ -76,7 +75,6 @@ describe('oopynciterable/from.ts', () => {
       const res2 = fun()
         .map(val => val + 1)
 
-      // tslint:disable-next-line: await-promise
       for await (const val of res2) {
         expect(val).toEqual(2)
       }

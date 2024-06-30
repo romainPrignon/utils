@@ -1,6 +1,5 @@
 // test
 import { callable, instanceOf } from '../../../src/fp/classes'
-// tslint:disable-next-line: no-duplicate-imports
 import * as classes from '../../../src/fp/classes'
 
 

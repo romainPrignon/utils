@@ -1,6 +1,4 @@
 // test
-// import {  } from '../../../src/oop/classes'
-// tslint:disable-next-line: no-duplicate-imports
 import * as classes from '../../../src/oop/classes'
 
 

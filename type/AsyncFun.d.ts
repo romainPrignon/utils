@@ -1,4 +1,4 @@
-import {Asyncify} from 'type-fest'
+import { Asyncify } from 'type-fest'
 import { UnknownArgs } from './Args'
 import { Fun } from './Fun'
 import { UnknownReturns } from './Returns'

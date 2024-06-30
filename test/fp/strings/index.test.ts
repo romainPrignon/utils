@@ -1,6 +1,5 @@
 // test
 import { concat } from '../../../src/fp/strings'
-// tslint:disable-next-line: no-duplicate-imports
 import * as strings from '../../../src/fp/strings'
 
 

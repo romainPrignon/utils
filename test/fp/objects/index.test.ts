@@ -1,6 +1,4 @@
 // test
-// import {  } from '../../../src/fp/objects'
-// tslint:disable-next-line: no-duplicate-imports
 import * as objects from '../../../src/fp/objects'
 
 

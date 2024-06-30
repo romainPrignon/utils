@@ -1,6 +1,4 @@
 // test
-// import {  } from '../../../src/oop/dates'
-// tslint:disable-next-line: no-duplicate-imports
 import * as dates from '../../../src/oop/dates'
 
 

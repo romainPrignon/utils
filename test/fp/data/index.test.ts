@@ -1,6 +1,5 @@
 // test
 import { imut, mut } from '../../../src/fp/data'
-// tslint:disable-next-line: no-duplicate-imports
 import * as data from '../../../src/fp/data'
 
 

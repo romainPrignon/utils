@@ -1,6 +1,5 @@
 // test
 import { isMultipleOf } from '../../../src/fp/numbers'
-// tslint:disable-next-line: no-duplicate-imports
 import * as numbers from '../../../src/fp/numbers'
 
 

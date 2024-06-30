@@ -1,6 +1,4 @@
 // test
-// import {  } from '../../../src/oop/strings'
-// tslint:disable-next-line: no-duplicate-imports
 import * as strings from '../../../src/oop/strings'
 
 

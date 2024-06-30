@@ -1,4 +1,4 @@
-import { Optional } from '../../../type'
+import { Maybe } from '../../../type'
 
 import { expectType } from 'tsd'
 
@@ -13,8 +13,8 @@ describe('oop/arrays/head.ts', () => {
     })
 
     it('should be typed as optional number for array of number', () => {
-      expectType<Optional<number>>(head([1]))
-      expectType<Optional<number>>(head([1, 2]))
+      expectType<Maybe<number>>(head([1]))
+      expectType<Maybe<number>>(head([1, 2]))
     })
 
     it('should return undefined for empty array', () => {

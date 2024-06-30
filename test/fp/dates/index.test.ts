@@ -1,6 +1,5 @@
 // test
 import { date, epoch, now } from '../../../src/fp/dates'
-// tslint:disable-next-line: no-duplicate-imports
 import * as dates from '../../../src/fp/dates'
 
 

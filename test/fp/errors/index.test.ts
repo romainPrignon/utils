@@ -1,17 +1,16 @@
 // test
-import { Error } from '../../../src/fp/errors'
-// tslint:disable-next-line: no-duplicate-imports
+import { Err } from '../../../src/fp/errors'
 import * as errors from '../../../src/fp/errors'
 
 
 describe('errors', () => {
   it('should export errors namespace', () => {
-    expect(Object.entries(errors).length).toEqual(1)
+    expect(Object.entries(errors).length).toEqual(2)
 
-    expect(errors.Error).toBeDefined()
+    expect(errors.Err).toBeDefined()
   })
 
   it('should export all namespace', () => {
-    expect(Error).toBeDefined()
+    expect(Err).toBeDefined()
   })
 })

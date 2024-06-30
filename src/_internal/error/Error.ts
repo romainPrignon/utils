@@ -1,21 +1,38 @@
-import { BaseError } from 'make-error-cause'
-
-
-type ErrorOptions = {
-  cause?: Error | globalThis.Error
+type ErrData = {
   code?: string
+  cause?: Err | globalThis.Error
+  context?: Record<string, unknown>
 }
 
-class Error extends BaseError {
+class Err extends Error {
   code?: string
+  cause?: Err | globalThis.Error
+  context?: Record<string, unknown>
 
-  constructor (message: string, opt?: ErrorOptions) {
-    super(message, opt?.cause)
+  constructor (message: string, data?: ErrData) {
+    super(message)
+    this.code = 'Err'
+    this.message = message
+    this.code = data?.code ? data?.code : 'Err'
+    this.cause = data?.cause
+    this.context = data?.context
 
-    this.code = opt?.code
+    Error.captureStackTrace(this, this.constructor)
+  }
+
+  static inherit (name: string): typeof Err {
+    const errorClass = class extends this {
+      constructor (message: string, data?: ErrData) {
+        super(message, data)
+        /* istanbul ignore next */
+        this.code = data?.code ? data?.code : name
+      }
+    }
+
+    Object.defineProperty(errorClass, 'name', { value: name }) // eslint-disable-line
+
+    return errorClass
   }
 }
 
-export {
-  Error
-}
+export { Err }
