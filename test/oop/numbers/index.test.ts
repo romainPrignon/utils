@@ -1,6 +1,5 @@
 // test
 import { Number } from '../../../src/oop/numbers'
-// tslint:disable-next-line: no-duplicate-imports
 import * as numbers from '../../../src/oop/numbers'
 
 

@@ -1,2 +1,1 @@
-export * from './optional'
-export * from './errorify'
+export * from './maybe'

@@ -1,6 +1,5 @@
 // test
 import { from } from '../../../src/oop/iterable'
-// tslint:disable-next-line: no-duplicate-imports
 import * as iterable from '../../../src/oop/iterable'
 
 

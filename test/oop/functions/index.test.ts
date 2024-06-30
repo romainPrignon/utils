@@ -1,19 +1,16 @@
 // test
-import { optional, errorify } from '../../../src/oop/functions'
-// tslint:disable-next-line: no-duplicate-imports
+import { maybe } from '../../../src/oop/functions'
 import * as functions from '../../../src/oop/functions'
 
 
 describe('functions', () => {
   it('should export functions namespace', () => {
-    expect(Object.entries(functions).length).toEqual(2)
+    expect(Object.entries(functions).length).toEqual(1)
 
-    expect(functions.optional).toBeDefined()
-    expect(functions.errorify).toBeDefined()
+    expect(functions.maybe).toBeDefined()
   })
 
   it('should export all namespace', () => {
-    expect(optional).toBeDefined()
-    expect(errorify).toBeDefined()
+    expect(maybe).toBeDefined()
   })
 })

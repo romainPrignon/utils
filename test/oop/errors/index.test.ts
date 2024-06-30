@@ -1,6 +1,5 @@
 // test
-import { Error } from '../../../src/oop/errors'
-// tslint:disable-next-line: no-duplicate-imports
+import { Err } from '../../../src/oop/errors'
 import * as errors from '../../../src/oop/errors'
 
 
@@ -9,10 +8,10 @@ describe('errors', () => {
     expect(Object.entries(errors).length).toEqual(1)
 
     expect(errors).toBeDefined()
-    expect(errors.Error).toBeDefined()
+    expect(errors.Err).toBeDefined()
   })
 
   it('should export all namespace', () => {
-    expect(Error).toBeDefined()
+    expect(Err).toBeDefined()
   })
 })

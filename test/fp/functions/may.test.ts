@@ -1,5 +1,5 @@
 import { expectType } from 'tsd'
-import { Error } from '../../../src/fp/errors/Error'
+import { Err } from '../../../src/fp/errors/Error'
 
 // test
 import { may } from '../../../src/fp/functions/may'
@@ -7,15 +7,15 @@ import { may } from '../../../src/fp/functions/may'
 
 describe('fp/functions/may.ts', () => {
   describe('may()', () => {
-    it('should be typed as R1 | Error', () => {
-      expectType<number | Error>(may(() => 1))
+    it('should be typed as R1', () => {
+      expectType<number>(may(() => 1))
     })
     it('should be typed as R1 | R2', () => {
       expectType<number | string>(may(() => 1, () => 'a'))
     })
 
-    it('should return an Error if failure callback not provided', () => {
-      const err = Error('boom', { code: 'BOOM' })
+    it('should return an Err if failure callback not provided', () => {
+      const err = Err('boom', { code: 'BOOM' })
 
       expect(
         may(() => { throw err })
@@ -29,7 +29,7 @@ describe('fp/functions/may.ts', () => {
     })
 
     it('should return fallback in failure case', () => {
-      const err = Error('boom', { code: 'BOOM' })
+      const err = Err('boom', { code: 'BOOM' })
 
       expect(
         may(

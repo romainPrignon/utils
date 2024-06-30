@@ -1,6 +1,5 @@
 // test
 import { fp, oop, struct } from '../src'
-// tslint:disable-next-line: no-duplicate-imports
 import * as Utils from '../src'
 
 
@@ -15,13 +14,12 @@ describe('index', () => {
 
   describe('fp', () => {
     it('should export fp namespace', () => {
-      expect(Object.entries(fp).length).toEqual(11)
+      expect(Object.entries(fp).length).toEqual(10)
 
       expect(fp.arrays).toBeDefined()
       expect(fp.classes).toBeDefined()
       expect(fp.dates).toBeDefined()
       expect(fp.errors).toBeDefined()
-      expect(fp.fs).toBeDefined()
       expect(fp.functions).toBeDefined()
       expect(fp.numbers).toBeDefined()
       expect(fp.objects).toBeDefined()
@@ -33,13 +31,12 @@ describe('index', () => {
 
   describe('oop', () => {
     it('should export oop namespace', () => {
-      expect(Object.entries(oop).length).toEqual(11)
+      expect(Object.entries(oop).length).toEqual(10)
 
       expect(oop.arrays).toBeDefined()
       expect(oop.classes).toBeDefined()
       expect(oop.dates).toBeDefined()
       expect(oop.errors).toBeDefined()
-      expect(oop.fs).toBeDefined()
       expect(oop.functions).toBeDefined()
       expect(oop.numbers).toBeDefined()
       expect(oop.objects).toBeDefined()

@@ -1,6 +1,5 @@
 // test
 import { head, tail } from '../../../src/oop/arrays'
-// tslint:disable-next-line: no-duplicate-imports
 import * as arrays from '../../../src/oop/arrays'
 
 
